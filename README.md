@@ -1,192 +1,246 @@
-1. What are App Services and what are the different types of options available in App Services?
+# Azure Cloud Services Assignment
 
-Azure App Service is a fully managed Platform as a Service (PaaS) offering from Microsoft Azure that allows developers to build, deploy, and host web applications, mobile applications, REST APIs, and business applications without managing the underlying infrastructure.
+**Submitted By:** Naveena
+**Course:** Cloud Computing 
 
-Types of Azure App Services:
-Web Apps – Used to host websites and web applications.
-API Apps – Used to build and host RESTful APIs.
-Mobile Apps – Provides backend services for mobile applications.
-WebJobs – Runs background tasks and scheduled jobs.
-Logic Apps – Automates workflows and integrates different services.
-Function Apps (Azure Functions) – Executes event-driven serverless code.
+---
 
-2. Explain Cloud Availability Set and Availability Zones
-Availability Set
+# 1. What are App Services and what are the different types of options available in App Services?
 
-An Availability Set is a logical grouping of virtual machines that helps protect applications from hardware failures, maintenance events, and unexpected downtime.
+Azure App Service is a fully managed Platform as a Service (PaaS) that enables developers to build, deploy, and host web applications, APIs, and mobile backends without managing the underlying infrastructure.
 
-It works by distributing VMs across:
+## Types of Azure App Services
 
-Fault Domains – Protect against hardware failures.
-Update Domains – Protect against planned maintenance.
-Availability Zones
+### Web Apps
+
+Used for hosting websites and web applications.
+
+### API Apps
+
+Used for creating and hosting REST APIs.
+
+### Mobile Apps
+
+Provides backend support for mobile applications.
+
+### WebJobs
+
+Runs background tasks and scheduled operations.
+
+### Logic Apps
+
+Automates workflows and integrates different services.
+
+### Function Apps (Azure Functions)
+
+Runs event-driven serverless code.
+
+---
+
+# 2. Explain Cloud Availability Set and Availability Zones
+
+## Availability Set
+
+An Availability Set is a logical grouping of Virtual Machines that improves application availability by distributing VMs across multiple fault domains and update domains.
+
+### Benefits
+
+* Protects against hardware failures.
+* Protects against planned maintenance.
+* Improves application uptime.
+
+## Availability Zone
 
 Availability Zones are physically separate datacenters within an Azure region. Each zone has independent power, cooling, and networking.
 
-Benefits:
+### Benefits
 
-High availability.
-Fault tolerance.
-Disaster recovery within the same region.
-Difference
-Availability Set	Availability Zone
-Logical grouping within a datacenter	Physically separate datacenters
-Protects against hardware and maintenance failures	Protects against datacenter failures
-Lower cost	Higher resilience
+* High availability.
+* Disaster recovery support.
+* Protection against datacenter failures.
 
-3. What are the responsibilities of users when it comes to different cloud offerings like Infrastructure as Service, Platform as Service and Function as Service and mention which Azure resource falls under each option.
-   Infrastructure as a Service (IaaS)
+## Comparison
 
-In IaaS, Azure manages the physical infrastructure while users manage the operating system, applications, middleware, runtime, and data.
+| Availability Set                   | Availability Zone                    |
+| ---------------------------------- | ------------------------------------ |
+| Logical separation                 | Physical separation                  |
+| Protects against hardware failures | Protects against datacenter failures |
+| Uses fault and update domains      | Uses independent datacenters         |
 
-User Responsibilities:
+---
 
-Install and maintain OS.
-Configure software and applications.
-Manage security updates.
-Manage networking and storage.
+# 3. What are the responsibilities of users when it comes to different cloud offerings like Infrastructure as Service, Platform as Service and Function as Service and mention which Azure resource falls under each option.
 
-Azure Resource Example:
+## Infrastructure as a Service (IaaS)
 
-Azure Virtual Machines (VMs)
-Platform as a Service (PaaS)
+Azure manages the physical infrastructure while the user manages the operating system, applications, middleware, and data.
 
-In PaaS, Azure manages infrastructure, operating systems, and runtime environments. Users focus on application development and data.
+### User Responsibilities
 
-User Responsibilities:
+* Operating system maintenance
+* Security updates
+* Software installation
+* Application management
 
-Develop and deploy applications.
-Manage application data.
-Configure application settings.
+### Azure Resource
 
-Azure Resource Example:
+* Azure Virtual Machines (VMs)
 
-Azure App Service
-Azure SQL Database
-Function as a Service (FaaS)
+---
 
-In FaaS, Azure manages almost everything. Users only provide the function code.
+## Platform as a Service (PaaS)
 
-User Responsibilities:
+Azure manages infrastructure, operating systems, middleware, and runtime environments.
 
-Write and maintain function code.
-Configure triggers and bindings.
+### User Responsibilities
 
-Azure Resource Example:
+* Application development
+* Application deployment
+* Data management
 
-Azure Functions
+### Azure Resources
 
-4.In a brief paragraph, explain networking options available in Azure mentioning each service discussed in the class.
-  Azure provides several networking services to enable secure communication between cloud resources and users.
+* Azure App Service
+* Azure SQL Database
 
-Azure Virtual Network (VNet)
+---
 
-Provides a private network environment for Azure resources.
+## Function as a Service (FaaS)
 
-Network Security Groups (NSG)
+Azure manages almost everything except the function code.
 
-Controls inbound and outbound network traffic using security rules.
+### User Responsibilities
 
-Azure Load Balancer
+* Writing code
+* Configuring triggers and bindings
 
-Distributes incoming traffic across multiple servers to improve availability.
+### Azure Resource
 
-Azure Application Gateway
+* Azure Functions
 
-Provides Layer 7 load balancing and web application firewall capabilities.
+---
 
-Azure VPN Gateway
+# 4.In a brief paragraph, explain networking options available in Azure mentioning each service discussed in the class.
 
-Creates secure connections between on-premises networks and Azure.
+Azure provides several networking services to ensure secure and reliable communication.
 
-Azure ExpressRoute
+## Azure Virtual Network (VNet)
 
-Provides a dedicated private connection between on-premises infrastructure and Azure datacenters.
+Creates a private network for Azure resources.
 
-Azure DNS
+## Network Security Groups (NSG)
 
-Hosts and manages DNS domains.
+Controls inbound and outbound traffic through security rules.
 
-These services help organizations build secure, scalable, and highly available cloud networks.
+## Azure Load Balancer
 
-5. What are Storage Accounts and the Different Options Available to Access Storage Accounts?
+Distributes incoming traffic across multiple servers.
 
-A Storage Account is a container that stores Azure storage services such as blobs, files, queues, tables, and disks.
+## Azure Application Gateway
 
-Types of Storage Services
-Blob Storage
+Provides web traffic load balancing and web application firewall capabilities.
+
+## Azure VPN Gateway
+
+Creates secure connections between Azure and on-premises networks.
+
+## Azure ExpressRoute
+
+Provides dedicated private connectivity between Azure and on-premises environments.
+
+## Azure DNS
+
+Hosts and manages DNS domains in Azure.
+
+These services help organizations build secure, scalable, and highly available network infrastructures.
+
+---
+
+# 5. What are Storage Accounts and the Different Options Available to Access Storage Accounts?
+
+A Storage Account is an Azure resource that provides a unique namespace for storing data.
+
+## Types of Storage Services
+
+### Blob Storage
 
 Stores unstructured data such as images, videos, and documents.
 
-File Storage
+### File Storage
 
-Provides managed file shares accessible through SMB protocol.
+Provides managed file shares.
 
-Queue Storage
+### Queue Storage
 
 Stores messages for communication between applications.
 
-Table Storage
+### Table Storage
 
 Stores structured NoSQL data.
 
-Disk Storage
+### Disk Storage
 
-Provides persistent storage for Azure Virtual Machines.
+Provides storage for Azure Virtual Machines.
 
-Access Methods
-Azure Portal
-Azure Storage Explorer
-Azure CLI
-Azure PowerShell
-REST APIs
-SDKs (.NET, Java, Python, etc.)
-Shared Access Signatures (SAS)
-Access Keys
-Azure Active Directory Authentication
+## Access Methods
 
-6. What are Different Options Available to Scale Up and Scale Out Azure App Services?
-Scale Up (Vertical Scaling)
+* Azure Portal
+* Azure Storage Explorer
+* Azure CLI
+* Azure PowerShell
+* REST APIs
+* SDKs (.NET, Java, Python, etc.)
+* Shared Access Signatures (SAS)
+* Access Keys
+* Azure Active Directory Authentication
 
-Scale Up increases the resources of a single App Service instance.
+---
 
-Examples:
+# 6. What are Different Options Available to Scale Up and Scale Out Azure App Services?
 
-More CPU.
-More RAM.
-Higher pricing tier.
+## Scale Up (Vertical Scaling)
 
-Example:
+Scale Up increases the resources allocated to a single App Service instance.
 
-Basic → Standard → Premium Plan.
+### Examples
 
-Advantages:
+* More CPU
+* More RAM
+* Higher pricing tier
 
-Improved performance.
-Easy to implement.
-Scale Out (Horizontal Scaling)
+### Advantages
 
-Scale Out increases the number of App Service instances running the application.
+* Improved performance
+* Simple implementation
 
-Examples:
+---
 
-1 instance → 5 instances → 10 instances.
+## Scale Out (Horizontal Scaling)
 
-Azure Load Balancer automatically distributes traffic among instances.
+Scale Out increases the number of App Service instances.
 
-Advantages:
+### Examples
 
-Better availability.
-Handles more users.
-Supports automatic scaling based on CPU, memory, or schedules.
-Comparison
-Scale Up	Scale Out
-Increase server resources	Increase number of servers
-Vertical scaling	Horizontal scaling
-Limited by server size	Can handle large traffic growth
-Easier configuration	Better availability and reliability
+* 1 instance to 5 instances
+* 5 instances to 10 instances
 
+Azure automatically distributes traffic among instances using load balancing.
 
+### Advantages
 
-Submitted By: Naveena
-Course: Cloud Computing 
+* Better availability
+* Handles increased traffic
+* Supports automatic scaling
+
+---
+
+## Comparison
+
+| Scale Up                   | Scale Out                   |
+| -------------------------- | --------------------------- |
+| Increases server resources | Increases number of servers |
+| Vertical scaling           | Horizontal scaling          |
+| Limited by hardware size   | Handles larger workloads    |
+| Easier configuration       | Better fault tolerance      |
+
+---
